@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pide Coca-Cola e Inca Kola personales.">
+  <title>Mi Tiendita | Bebidas</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="encabezado">
+    <a class="marca" href="#">La Tiendita de mi Tio<span>.</span></a>
+    <span class="etiqueta">PEDIDOS POR WHATSAPP</span>
+  </header>
+
+  <main>
+    <section class="portada">
+      <p class="sobre-titulo">TU PAUSA, TU BEBIDA</p>
+      <h1>Algo rico para<br>seguir con tu día.</h1>
+      <p class="descripcion">
+        Elige tu gaseosa favorita y haz tu pedido en segundos.
+      </p>
+    </section>
+
+    <section class="catalogo">
+      <div class="titulo-seccion">
+        <div>
+          <p class="sobre-titulo">NUESTRO CATÁLOGO</p>
+          <h2>Elige tu favorita</h2>
+        </div>
+        <span class="contador">2 productos</span>
+      </div>
+
+      <div class="productos">
+        <article class="producto">
+          <div class="imagen-producto coca">
+            <img
+              src="https://placehold.co/240x300/fff0f0/c62828?text=Coca-Cola"
+              alt="Coca-Cola personal"
+            >
+          </div>
+          <div class="datos-producto">
+            <p class="tipo">GASEOSA PERSONAL</p>
+            <h3>Coca-Cola</h3>
+            <p class="precio">S/ 3.50</p>
+            <div class="cantidad">
+              <button type="button" data-change="-1" data-product="coca"
+                aria-label="Quitar Coca-Cola">−</button>
+              <output id="cantidad-coca">0</output>
+              <button type="button" data-change="1" data-product="coca"
+                aria-label="Agregar Coca-Cola">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="producto">
+          <div class="imagen-producto inca">
+            <img
+              src="https://placehold.co/240x300/fff8d9/856404?text=Inca+Kola"
+              alt="Inca Kola personal"
+            >
+          </div>
+          <div class="datos-producto">
+            <p class="tipo">GASEOSA PERSONAL</p>
+            <h3>Inca Kola</h3>
+            <p class="precio">S/ 3.50</p>
+            <div class="cantidad">
+              <button type="button" data-change="-1" data-product="inca"
+                aria-label="Quitar Inca Kola">−</button>
+              <output id="cantidad-inca">0</output>
+              <button type="button" data-change="1" data-product="inca"
+                aria-label="Agregar Inca Kola">+</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="pedido">
+      <div>
+        <p class="sobre-titulo">TU PEDIDO</p>
+        <h2 id="total">Total: S/ 0.00</h2>
+        <p id="resumen">Todavía no has elegido bebidas.</p>
+      </div>
+
+      <label for="nombre">Tu nombre</label>
+      <input id="nombre" type="text" maxlength="60"
+        placeholder="Escribe tu nombre" autocomplete="name">
+
+      <button id="enviar-pedido" class="boton-pedido" type="button">
+        Pedir por WhatsApp <span>↗</span>
+      </button>
+      <p class="nota">Confirma la disponibilidad y la entrega por WhatsApp.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>Mi Tiendita · Bebidas para tu día</p>
+  </footer>
+</body>
+</html>

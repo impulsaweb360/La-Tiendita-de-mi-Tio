@@ -1,0 +1,265 @@
+
+:root {
+    --fondo: #f6f7fb;
+    --texto: #182238;
+    --secundario: #70798b;
+    --rojo: #d92d3a;
+    --amarillo: #f2c94c;
+    --blanco: #ffffff;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    background: var(--fondo);
+    color: var(--texto);
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 22px max(5%, calc((100% - 1100px) / 2));
+    background: var(--blanco);
+  }
+  
+  .marca {
+    color: var(--texto);
+    font-size: 22px;
+    font-weight: 800;
+    text-decoration: none;
+  }
+  
+  .marca span {
+    color: var(--rojo);
+  }
+  
+  .etiqueta, .contador {
+    color: var(--secundario);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  main {
+    width: min(100% - 32px, 1000px);
+    margin: 0 auto;
+  }
+  
+  .portada {
+    margin-top: 26px;
+    padding: 48px;
+    border-radius: 24px;
+    background: #192b49;
+    color: white;
+  }
+  
+  .sobre-titulo {
+    margin: 0 0 12px;
+    color: var(--rojo);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+  }
+  
+  .portada .sobre-titulo {
+    color: #ffcc72;
+  }
+  
+  .portada h1 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 52px);
+    line-height: 1.08;
+  }
+  
+  .descripcion {
+    max-width: 440px;
+    color: #d6deeb;
+    line-height: 1.7;
+  }
+  
+  .catalogo {
+    padding: 36px 0;
+  }
+  
+  .titulo-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  h2, h3 {
+    margin: 0;
+  }
+  
+  .titulo-seccion h2, .pedido h2 {
+    font-size: 25px;
+  }
+  
+  .productos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+  
+  .producto {
+    overflow: hidden;
+    border: 1px solid #e9ebf2;
+    border-radius: 20px;
+    background: var(--blanco);
+  }
+  
+  .imagen-producto {
+    display: grid;
+    place-items: center;
+    height: 200px;
+    padding: 12px;
+  }
+  
+  .coca {
+    background: #fff0f0;
+  }
+  
+  .inca {
+    background: #fff8d9;
+  }
+  
+  .imagen-producto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .datos-producto {
+    padding: 20px;
+  }
+  
+  .tipo {
+    color: var(--secundario);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  
+  .datos-producto h3 {
+    font-size: 21px;
+  }
+  
+  .precio {
+    margin: 10px 0 18px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  
+  .cantidad {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+  
+  .cantidad button {
+    width: 42px;
+    height: 42px;
+    border: 0;
+    border-radius: 12px;
+    background: #edf0f6;
+    color: var(--texto);
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .cantidad output {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  
+  .pedido {
+    display: grid;
+    gap: 14px;
+    padding: 28px;
+    border: 1px solid #e9ebf2;
+    border-radius: 20px;
+    background: var(--blanco);
+  }
+  
+  .pedido label {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  .pedido input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #d9deea;
+    border-radius: 10px;
+    font: inherit;
+  }
+  
+  #resumen, .nota {
+    color: var(--secundario);
+    font-size: 13px;
+    line-height: 1.6;
+  }
+  
+  .boton-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 16px 20px;
+    border: 0;
+    border-radius: 12px;
+    background: #16834b;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  
+  .boton-pedido:hover {
+    background: #116a3c;
+  }
+  
+  footer {
+    padding: 30px 16px;
+    color: var(--secundario);
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  @media (max-width: 600px) {
+    .encabezado {
+      padding: 18px 16px;
+    }
+  
+    .etiqueta {
+      font-size: 9px;
+      letter-spacing: 0;
+    }
+  
+    .portada {
+      padding: 30px 24px;
+    }
+  
+    .productos {
+      grid-template-columns: 1fr;
+    }
+  
+    .imagen-producto {
+      height: 190px;
+    }
+  
+    .pedido {
+      padding: 22px;
+    }
+  }
+  
