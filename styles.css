@@ -455,4 +455,13 @@ footer {
   }
 }
 
+/* Corregir la posición de la Coca-Cola */
+.imagen-producto.coca img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center center;
+  display: block;
+}
+
   
